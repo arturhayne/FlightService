@@ -1,0 +1,32 @@
+{
+  "name": "artur/flight-service",
+  "version": "1.0.0",
+  "description": "Flight Service",
+  "keywords": [
+    "flight"
+  ],
+  "homepage": "https://github.com/arturhayne",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Artur Elias Hayne Oliveira",
+      "homepage": "https://github.com/arturhayne"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "FlightService\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  }
+}
