@@ -1,11 +1,11 @@
 # Flight Service
-This is just a sample project exposing a domain service, Flight Service.
+This is just a sample project exposing a domain service, [Flight Service](https://github.com/arturhayne/FlightService/blob/main/src/FlightService.php).
 
-- Flight: Domain Model Class representing the flight
-- AirportAnnouncer: Domain interface that connects to an external announcer. 
+- [Flight](https://github.com/arturhayne/FlightService/blob/main/src/Flight.php): Domain Model Class representing the flight
+- [AirportAnnouncer](https://github.com/arturhayne/FlightService/blob/main/src/AirportAnnouncer.php): Domain interface that connects to an external announcer. 
 We can use a message broker like RabitMQ, Kafka, or pubsub to delivery the message async.
-- Flight Repository: Persist flights. 
-- LocalDateTime: Data value object representing a local date time. In our scenario the flight time.
+- [Flight Repository](https://github.com/arturhayne/FlightService/blob/main/src/FlightRepository.php): Persist flights. 
+- [LocalDateTime](https://github.com/arturhayne/FlightService/blob/main/src/LocalDateTime.php): Data value object representing a local date time. In our scenario the flight time.
 
 ## Concepts
  - Dependency inversion: Flight Service receives AirportAnnouncer and Flight Repository interfaces in its constructor.
@@ -13,13 +13,14 @@ We can use a message broker like RabitMQ, Kafka, or pubsub to delivery the messa
  - DDD: Like a sample, in this project we are presenting the domain layer, but it is easy to see other layers:
     - Infrastructure layer: responsible to persist the flight and announce delyas
     - Application layer: receive the requests an orchestrating the action.
- - Tests: FlightServiceTest covering domain layer with some unit test.
+ - Tests: [FlightServiceTest](https://github.com/arturhayne/FlightService/blob/main/tests/Unit/FlightServiceTest.php) covering domain layer with some unit test.
     - Following Given, When, Then structure (when possible)
     - Meaningful names
     - Validating domain logic (business decision)
  - Meaningful names: variables, methods have meaningful names preventing any unnecessary comment.   
  - Formatting: Classes are following PSR-12 code style. 
  - Respect of law of demeter: a module should not know the innards od the objects its manipulates.
+ - Some Design patterns: Repository, factory method
  
  ## How to Run the tests
  - docker-compose up -d
