@@ -5,7 +5,7 @@ This is just a sample project exposing a domain service, [Flight Service](https:
 - [AirportAnnouncer](https://github.com/arturhayne/FlightService/blob/main/src/AirportAnnouncer.php): Domain interface that connects to an external announcer. 
 We can use a message broker like RabitMQ, Kafka, or pubsub to delivery the message async.
 - [Flight Repository](https://github.com/arturhayne/FlightService/blob/main/src/FlightRepository.php): Persist flights. 
-- [LocalDateTime](https://github.com/arturhayne/FlightService/blob/main/src/LocalDateTime.php): Data value object representing a local date time. In our scenario the flight time.
+- [LocalDateTime](https://github.com/arturhayne/FlightService/blob/main/src/LocalDateTime.php): Data value object representing a local date time. In our scenario, the flight time.
 
 ## Concepts
  - Dependency inversion: Flight Service receives AirportAnnouncer and Flight Repository interfaces in its constructor.
@@ -14,7 +14,7 @@ We can use a message broker like RabitMQ, Kafka, or pubsub to delivery the messa
     - Infrastructure layer: responsible to persist the flight and announce delyas
     - Application layer: receive the requests an orchestrating the action.
  - Tests: [FlightServiceTest](https://github.com/arturhayne/FlightService/blob/main/tests/Unit/FlightServiceTest.php) covering domain layer with some unit test.
-    - Following Given, When, Then structure (when possible)
+    - Following Given, When, Then structure
     - Meaningful names
     - Validating domain logic (business decision)
  - Meaningful names: variables, methods have meaningful names preventing any unnecessary comment.   
