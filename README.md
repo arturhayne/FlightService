@@ -19,7 +19,7 @@ We can use a message broker like RabitMQ, Kafka, or pubsub to delivery the messa
     - Validating domain logic (business decision)
  - Meaningful names: variables, methods have meaningful names preventing any unnecessary comment.   
  - Formatting: Classes are following PSR code style. 
- - Respect of law of demeter: a module should not know the innards od the objects its manipulates.
+ - Respect of law of demeter: a module should not know the innards of the objects its manipulates.
  - Some Design patterns: Repository, factory method
  
  ## How to Run the tests
